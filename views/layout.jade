@@ -1,0 +1,66 @@
+!!! 5
+
+head
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible",content="IE=edge,chrome=1")
+
+  title
+    = title
+    | &mdash; Engine Yard sample app
+
+  script(src="/socket.io/socket.io.js")
+  != css('style')
+  != js('public')
+
+body
+
+  .wrapper
+
+    #header
+      .container
+        .row
+          .span2.span-mini
+            .pull-right
+              .logo
+                img(src='img/chat_56.png')
+          .span10
+            .title
+              h1
+                |  Chat: a Node.js sample
+              h5
+                |  Deployed on Engine Yard Cloud
+
+
+    #content
+      .container
+        != body
+
+    .push
+
+  #footer
+    .container
+      .row
+        .span1
+          .pull-right
+            .logo
+              a(href='http://www.engineyard.com/')
+                img(src='img/engine-yard-logo.png')
+        .span7.footernav
+          .row.footernav-1
+            .span3
+              a(href='https://support.cloud.engineyard.com/entries/21979422-deploy-your-node-js-application-on-engine-yard-cloud')
+                i.icon-book
+                | &nbsp;Deploying Node.js on Cloud
+            .span3
+              a(href='http://www.engineyard.com/blog/2012/how-to-nodejs/')
+                i.icon-question-sign
+                | &nbsp;Engine Yard's Node.js Stack
+          .row.footernav-2
+            .span3
+              a(href='http://cloud.engineyard.com/')
+                i.icon-home
+                | &nbsp;Cloud Dashboard
+            .span3
+              a(href='https://github.com/engineyard/chat')
+                i.icon-cog
+                | &nbsp;Chat source code

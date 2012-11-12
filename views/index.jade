@@ -1,0 +1,39 @@
+.row
+  .span8.chatwindow
+    .chat-transcript-wrapper
+      section.chat-transcript#chatbox
+        .row
+          .orientation
+            | Welcome to Engine Yard Cloud! This is a live chat application,
+            | so share it with your friends, or open it in multiple
+            | browser tabs to try it out by yourself.
+
+    section.chat-entry
+      .row
+        .span2.span-mini.prompt
+          img(src="img/chat-plus.png")
+        .span5.span-maxi
+          form#message-box
+            textarea.new-chat
+
+  .span4.chatmembers
+    p Give people this link to chat with them:
+    #share-link(rel="share-link")
+
+    h4 Members
+
+    ul.nav.nav-pills.nav-stacked#chatmembers-list
+
+#sign-in-modal.modal.hide
+  .modal-header
+    button(type="button", data-dismiss="modal").close
+      x
+    h3
+      | What's your name?
+  .modal-body
+    form.form-inline#username-form
+      label
+        input#username(placeholder="Name", required="yes")
+
+      button.btn(type="submit")
+        | Enter Chat

@@ -1,0 +1,168 @@
+@footer-height: 140px;
+@sky-gradient-color: #d0e9f2;
+
+//- So sticky footer works
+html, body { height: 100%; }
+
+//- Also for sticky footer
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -@footer-height;
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, @sky-gradient-color 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,@sky-gradient-color)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,@sky-gradient-color 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%,@sky-gradient-color 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,@sky-gradient-color 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffff 0%,@sky-gradient-color 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d0e9f2',GradientType=0 ); /* IE6-9 */
+}
+
+#header {
+  background: transparent;
+  height: 100px;
+  padding-bottom: 24px;
+  .logo {
+    margin: 20px auto;
+  }
+  h1 {
+    margin-bottom: 0;
+  }
+  h5 {
+    margin-top: 0;
+  }
+  .title {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+}
+
+#content {
+}
+// chat module
+.chatwindow {
+  position: relative;
+  background-color: #fff;
+  -webkit-box-shadow:  0px 3px 25px 1px rgba(0, 0, 0, .1);
+  box-shadow:  0px 3px 25px 1px rgba(0, 0, 0, .1);
+  .border-radius(8px);
+  min-height: 300px;
+}
+
+// Link to invite others to chat
+#share-link {
+  width: auto;
+  max-width: 100%;
+  color: @grayDark;
+  .border-radius(3px);
+  border: none;
+  padding: 4px 17px;
+  margin-bottom: 36px;
+  background-color: @grayLighter;
+}
+
+// List of who is in the chat
+.chatmembers {
+  margin-top: 20px;
+}
+
+// Form to enter chat text
+.chat-entry {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  .border-radius(0 0 8px 8px);
+  background-color: @blueGrey;
+  .prompt {
+    img {
+      margin: 29px 0 0 54px;
+    }
+  }
+  form {
+    margin: 18px 0px 10px 15px;
+    textarea {
+      width: 440px;
+      min-height: 50px;
+    }
+  }
+}
+
+// fixed container
+.chat-transcript-wrapper {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.chat-transcript {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  .row {
+    margin: 0;
+    padding: 5px 0;
+    .orientation {
+      color: @grayLight;
+      font-size: 14px;
+      padding: 50px 70px;
+      color: @blueGrey;
+    }
+    .name {
+      -ms-word-break: break-all;
+      word-break: break-all;
+      color: lighten(@gray, 20%);
+
+    }
+    .chat-text {
+      color: @gray;
+    }
+    &.highlight {
+      .chat-text, .name {
+        color: lighten(@blueGrey, 20%);
+      }
+    }
+  }
+}
+
+#footer, .push {
+  height: @footer-height;
+}
+
+#footer {
+  background: transparent;
+  .container {
+    padding-top: 24px;
+    padding-left: 24px;
+  }
+  .logo {
+    position: relative;
+    left: 24px;
+  }
+  .footernav {
+    margin-left: 62px;
+  }
+  .row.footernav-1 {
+    margin-top: 24px;
+  }
+  .row.footernav-2 {
+    margin-top: 8px;
+  }
+}
+
+// Special span width
+.span2.span-mini {
+  width: 100px;
+}
+
+.span5.span-maxi {
+  width: 440px;
+}
+
+// Sign in modal
+#sign-in-modal {
+  padding: 0 0 20px;
+  .form-inline input {
+    margin-right: 8px;
+  }
+}

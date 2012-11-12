@@ -1,0 +1,33 @@
+{
+  "name": "engine-yard-chat",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "0.8.x"
+  },
+  "dependencies": {
+    "express": "2.x.x",
+    "jade": "0.x.x",
+    "less": "1.x.x",
+    "socket.io": "0.9.x",
+    "connect-assets": "~2.x.x",
+    "express-namespace": "~0.1.x",
+    "cookie-sessions": "0.0.x",
+    "sockjs": "~0.3.1",
+    "redis": "~0.7.2",
+    "hiredis": "~0.1.14",
+    "validator": "~0.4.11",
+    "sanitizer": "0.0.15",
+    "async": "~0.1.22"
+  },
+  "devDependencies": {
+    "node-dev": "0.x.x",
+    "request": "2.x.x",
+    "mocha": "1.x.x"
+  },
+  "scripts": {
+    "dev": "./bin/dev-server",
+    "start": "node ./app.js",
+    "test": "./bin/test"
+  }
+}
