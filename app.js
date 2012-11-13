@@ -76,7 +76,7 @@ io.on('connection', function(socket) {
 // Routes
 
 app.get('/', function(req, res){
-  res.render('index', { title: 'Node.js Chat' })
+  res.render('index', { title: 'Doug's Node.js Chat' })
 });
 
 // Bind to port
